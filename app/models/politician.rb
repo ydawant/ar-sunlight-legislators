@@ -3,8 +3,6 @@ require 'debugger'
 
 class Politician < ActiveRecord::Base
 
-	attr_reader :name, :title, :party, :state, :in_office, :gender, :phone, :congress_office, :birthdate
-
 	def self.import_from_csv(attributes = {})
 		clean_attributes = {:name => "#{attributes["firstname"]} #{attributes["middlename"]} #{attributes["lastname"]} #{attributes["name_suffix"]}",
 		:title => attributes["title"],
@@ -20,6 +18,6 @@ class Politician < ActiveRecord::Base
 	end
 
 	def to_s
-		"#{name}, #{state}, #{title}"
+		"#{name}, #{state}, #{title}, (#{party})"
 	end
 end
