@@ -8,4 +8,4 @@ Twitter.configure do |config|
 end
 
 
- p Twitter.search('RepToddYoung')
+ Twitter.search('RepToddYoung',:result_type => "recent")
