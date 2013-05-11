@@ -12,7 +12,8 @@ class Politician < ActiveRecord::Base
 		:gender => attributes["gender"],
 		:phone => attributes["phone"],
 		:congress_office => attributes["congress_office"],
-		:birthdate => attributes["birthdate"] }
+		:birthdate => attributes["birthdate"], 
+		:twitter_id => attributes["twitter_id"]}
 
 		Politician.new(clean_attributes)
 	end

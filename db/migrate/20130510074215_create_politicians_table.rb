@@ -10,9 +10,11 @@ class CreatePoliticiansTable < ActiveRecord::Migration
       t.string :phone
       t.string :congress_office
       t.date :birthdate
+      t.string :twitter_id
 
       t.timestamps
 
     end
   end
 end
+
